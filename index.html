@@ -35,7 +35,7 @@
             {{#each post in model}}
             <tr><td>
               {{#link-to 'post' this.post}}
-                {{post.title}} <small class='text-muted'>by {{post.author.name}}</small>
+                {{{post.title}}} <small class='text-muted'>by {{post.author.name}}</small>
               {{/link-to}}
             </td></tr>
             {{else}}
@@ -58,7 +58,7 @@
       <button {{action 'edit'}}>Edit</button>
     {{/if}}
 
-    <h1>{{title}}</h1>
+    <h1>{{{title}}}</h1>
     <h2>by {{author.name}} <small class='muted'>({{format-date date}})</small></h2>
 
     <hr>
