@@ -30,6 +30,12 @@ App.PostsRoute = Ember.Route.extend({
   }
 });
 
+App.PostRoute = Ember.Route.extend({
+  model: function(params) {
+    return posts.findBy('id', params.post_id);
+  }
+});
+
 App.PostController = Ember.ObjectController.extend({
   isEditing: false,
 
